@@ -1,0 +1,22 @@
+block vars
+
+header.l-header
+  .header
+    .header-logo
+      a(href="https://biz.applynow.jp/")
+        img(src=path+"assets/img/common/logo.svg")
+    nav.header-nav.u-hidden-xs
+      ul.header-nav-list
+        li.header-nav-item
+          a.header-nav-item__link(href="#about") 電子契約サービスとは
+        li.header-nav-item
+          a.header-nav-item__link(href="#func") 機能紹介
+        li.header-nav-item
+          a.header-nav-item__link(href="#merits") 導入メリット
+        li.header-nav-item
+          a.header-nav-item__link(href="#secure") セキュリティについて
+        li.header-nav-item
+          a.header-nav-item__link(href="#faq") よくある質問
+        li.header-nav-item
+          a(href="https://biz.applynow.jp/inqury/")
+            +button('お問い合わせ・資料請求','mod-attention')

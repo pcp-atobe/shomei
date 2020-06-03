@@ -1,0 +1,18 @@
+// functions
+@function rem($value) {
+  @return ($value / 12) * 1rem;
+}
+
+@function vw__pc($value) {
+  $rate: 100 / 1366;
+  @return $rate * $value * 1vw;
+}
+
+@function vw__sp($value) {
+  $rate: 100 / 375;
+  @return $rate * $value * 1vw;
+}
+
+@function aspect($width, $height) {
+  @return ($width / $height) * 100%;
+}

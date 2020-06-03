@@ -1,0 +1,49 @@
+.u-fade {
+  opacity: 0;
+  transform: translateY(#{rem(8)});
+  transition: all 0.7s ease;
+
+  &.is-show {
+    will-change: auto;
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  &.mod-delay-1 {
+    transition-delay: 0.3s;
+  }
+
+  &.mod-delay-2 {
+    transition-delay: 0.5s;
+  }
+}
+
+.about-svg {
+  .u-anime {
+    .svg-anime_group1 {
+      opacity: 0;
+      transform: translateX(#{rem(32)});
+      top: rem(8);
+      transition: transform 0.7s ease 0.5s, opacity 0.3s ease, top 0.3s ease;
+    }
+    .svg-anime_group2 {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      transition-delay: 1.2s;
+    }
+
+    &.is-show {
+      .svg-anime_group1 {
+        will-change: auto;
+        top: 0;
+        transform: translateX(0);
+        opacity: 1;
+      }
+      .svg-anime_group2 {
+        will-change: auto;
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
+}

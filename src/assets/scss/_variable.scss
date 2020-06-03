@@ -1,0 +1,35 @@
+@import "_functions";
+
+$font_base: YakuHanJP,
+"Noto Sans JP",
+"Hiragino Kaku Gothic ProN",
+"Hiragino Kaku Gothic Pro",
+"Hiragino Kaku Gothic ProN",
+"ヒラギノ角ゴ Pro W3",
+"メイリオ",
+sans-serif;
+
+$gap: rem(8);
+$container_width: 1090;
+
+$fs--18: rem(18);
+$fs--20: rem(20);
+$fs--24: rem(24);
+$fs--28: rem(28);
+$fs--30: rem(30);
+$fs--32: rem(32);
+$fs--42: rem(42);
+$fs--56: rem(56);
+
+$screen-xs-max: 767px;
+
+$c-bg--white: #ffffff;
+$c-bg--orange: #fd9233;
+$c-bg--blue: #2183c0;
+$c-bg--mos_blue: #F7FEFC;
+
+$c-f--white: #ffffff;
+$c-f--blue: #2183c0;
+$c-f--black: #333333;
+$c-f--gray: #5d6175;
+$c-f--orange: #fd9233;

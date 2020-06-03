@@ -1,0 +1,19 @@
+extends ../layout/_layout.pug
+
+block vars
+  - var path = './'
+
+block end_script
+  script(type='text/javascript', src=path+'assets/js/app.js')
+
+block main
+  main.p
+    .p-stage
+      .p-stage_controll
+        ul
+          li.js-click-change-mode(data-mode="write") ペンモード
+          li.js-click-change-mode(data-mode="stamp") スタンプモード
+          li.js-click-change-mode(data-mode="eraser") 消しゴムモード
+          li.js-click-reset リセット
+
+      .p-stage_canvas#stage

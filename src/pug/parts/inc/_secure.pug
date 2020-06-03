@@ -1,0 +1,45 @@
+block vars
+
+section.p-section.mod-bg-mos_blue#secure
+  .u-container
+    +head('セキュリティについて')
+    .u-contents.u-mb--8.u-fade.u-anime
+      p.p-lead.u-text-center
+        | 電子契約では、<br class="u-visible-xs">契約データをクラウド上で一元管理するため、<br>
+        | 閲覧制限の管理やバックアップなど、セキュリティ面でも非常に優れています。<br class="u-hidden-xs">
+        | 電子契約は、<br class="u-visible-xs"><span class="u-strong">コンプライアンス強化としてもご活用できます。</span>
+    .u-row.u-mb--13
+      .u-col--6.u-mb--2.u-fade.u-anime
+        +card('暗号化通信')
+          p 通信はSSL/TLS で常に暗号化されており（256bit暗号化）、通信における盗聴や傍受、改ざんやなりすまし等のリスクへの対策をしております。
+      .u-col--6.u-mb--2.u-fade.u-anime
+        +card('データの保護')
+          p 24時間ごとに自動でバックアップを行い、サービス上の重要なデータや契約内容の紛失対策を行っています。
+      .u-col--6.u-mb--2.u-fade.u-anime
+        +card('サービスの高可用性')
+          p サーバー・ネットワーク機器の多重化、ロードバランサによる負荷分散を行い、障害発生時にはサービスを迅速に復旧させる体制を整えています。また、データセンターはSLA99.99%の国内データセンターを利用し、災害時のサービス停止リスクを最小化しています。
+      .u-col--6.u-mb--2.u-fade.u-anime
+        +card('Pマーク/ISMSの取得')
+          p プライバシーマーク、情報セキュリティマネジメントについての国際標準規格「ISO 27001（ISMS）」の認証を取得し、継続的な個人情報保護マネジメント体制を構築しています。
+
+
+    #faq
+      +head('よくある質問')
+      .u-row.u-mb--8
+        .u-col--6.u-mb--2.u-fade.u-anime
+          +card__qa('どのようなサービスですか？')
+            p 当サービスは、雇用に関わる契約書をインターネット上で交換し、相手の同意のもと契約を締結できるサービスです。<br>サーバー上での契約書原本の電子データ保管・管理が行えます。<br>また、動画面接サービス『Apply Now』と併せてご利用いただくことで、採用面接からワンストップで契約締結できます。
+        .u-col--6.u-mb--2.u-fade.u-anime
+          +card__qa('利用料金を教えてください。')
+            p 料金についての詳細は<a href="https://biz.applynow.jp/inqury/">フォーム</a>よりお問合せください。
+        .u-col--6.u-mb--2.u-fade.u-anime
+          +card__qa('アルバイト採用以外でも利用できますか？')
+            p 雇用契約に関わる契約であれば、社員・アルバイト問わずご利用いただけます。<br>締結可能な契約は雇用契約のみとなり、企業間での契約には対応しておりません。
+        .u-col--6.u-mb--2.u-fade.u-anime
+          +card__qa('推奨している動作環境を教えてください。')
+            p 管理画面利用時は<br>【PC】<br>Google Chrome （最新バージョン）<br>FireFox （最新バージョン）<br>Safari （最新バージョン）<br>Microsoft Edge【iPad】<br>Safari （最新バージョン）<br>※推奨環境以外でご覧いただいた場合、 本サイトがご利用できない、もしくは正しく表示されない可能性がございます。
+
+      .u-contents
+        p.u-text-center
+          | その他、ご質問や不明な点が<br class="u-visible-xs">ございましたら、<br>
+          | 気軽に、<a href="https://biz.applynow.jp/inqury/">お問い合わせフォーム</a>より<br class="u-visible-xs">ご連絡ください。

@@ -1,0 +1,148 @@
+.card {
+  height: 100%;
+
+  .card-inner {
+    height: 100%;
+    background-color: $c-bg--white;
+    border-left: rem(6) solid $c-bg--orange;
+    padding: rem(28);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.16);
+  }
+
+  .card-head {
+    display: flex;
+    position: relative;
+    margin-bottom: $gap * 2;
+    color: $c-f--blue;
+
+    .card-head__icon,
+    .card-head__check {
+      width: rem(40);
+    }
+
+    .card-head__icon {
+    }
+
+    .card-head__check {
+      &:before {
+        content: "";
+        position: absolute;
+        top: calc(50% - #{rem(12)});
+        left: 10px;
+        width: rem(12);
+        height: rem(20);
+        border-bottom: rem(4) solid $c-bg--blue;
+        border-right: rem(4) solid $c-bg--blue;
+        transform: rotate(45deg);
+      }
+    }
+
+    .card-head__text {
+      font-size: rem(24);
+      font-weight: bold;
+
+      @media screen and (max-width: $screen-xs-max) {
+        font-size: rem(20);
+      }
+    }
+  }
+  .card-body {
+    font-size: rem(18);
+    @media screen and (max-width: $screen-xs-max) {
+      font-size: rem(14);
+    }
+  }
+
+  &.mod-qa {
+    height: auto;
+
+    .card-head {
+      position: relative;
+      padding-right: rem(40);
+      cursor: pointer;
+
+      @media screen and (max-width: $screen-xs-max) {
+        flex-wrap: wrap;
+        margin-bottom: 0;
+      }
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: rem(20);
+        width: rem(30);
+        height: rem(2);
+        background-color: $c-bg--orange;
+        transition: transform 0.5s ease;
+      }
+
+      &:after {
+        transform: rotate(90deg);
+      }
+
+      .card-head__icon {
+        font-size: rem(30);
+        font-weight: bold;
+        color: $c-f--blue;
+        line-height: 1;
+
+        @media screen and (max-width: $screen-xs-max) {
+          width: 100%;
+        }
+      }
+
+      .card-head__text {
+        color: $c-f--gray;
+      }
+    }
+
+    .card-body {
+      display: flex;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      @media screen and (max-width: $screen-xs-max) {
+        flex-wrap: wrap;
+      }
+
+      .card-body__icon {
+        width: rem(40);
+        display: block;
+        font-size: rem(30);
+        color: $c-f--orange;
+
+        @media screen and (max-width: $screen-xs-max) {
+          width: 100%;
+        }
+      }
+
+      .card-body__msg {
+        width: calc(100% - #{rem(40)});
+        font-size: rem(18);
+        line-height: (31.5/18);
+
+        @media screen and (max-width: $screen-xs-max) {
+          width: 100%;
+          font-size: rem(14);
+        }
+      }
+    }
+
+    &.is-show {
+      .card-head {
+        margin-bottom: $gap * 2;
+
+        &:before,
+        &:after {
+          transform: rotate(360deg);
+        }
+      }
+
+      .card-body {
+        max-height: rem(600);
+      }
+    }
+  }
+}

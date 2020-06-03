@@ -1,0 +1,156 @@
+.button {
+  &:hover {
+    .button-inner {
+      border-bottom: 0;
+      top: rem(6);
+      border-bottom: rem(6) solid transparent;
+    }
+  }
+
+  .button-inner {
+    position: relative;
+    background-color: $c-bg--orange;
+    padding: rem(16) rem(40);
+    border-radius: rem(10);
+    border-bottom: rem(6) solid #AF6001;
+    overflow: hidden;
+
+    @media screen and (max-width: $screen-xs-max) {}
+
+    &:before {
+      content: '';
+      display: block;
+      width: 0px;
+      height: 100%;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      opacity: 0;
+      background: $c-bg--white;
+      box-shadow: 0 0 20px 5px $c-bg--white;
+      transform: skewX(-20deg);
+    }
+
+    .button-text {
+      color: $c-f--white;
+      font-weight: bold;
+      font-size: rem(16);
+      position: relative;
+      display: block;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: rem(-24);
+        top: calc(50% - #{rem(12)});
+        width: rem(18);
+        height: rem(24);
+        background: url('../img/icon/ic_file--white.svg') center center no-repeat;
+        background-size: contain;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        right: rem(-24);
+        top: calc(50% - #{rem(7)});
+        width: rem(14);
+        height: rem(14);
+        background: url('../img/icon/ic_arrow--white.svg') center center no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  &.mod-large {
+
+    .button-inner {
+      padding: rem(36) rem(70);
+
+      @media screen and (max-width: $screen-xs-max) {
+        width: rem(320);
+        padding: rem(24) rem(40);
+      }
+    }
+
+    .button-text {
+      font-size: rem(25);
+
+      @media screen and (max-width: $screen-xs-max) {
+        font-size: rem(20);
+      }
+
+      &:before {
+        left: rem(-42);
+        top: calc(50% - #{rem(21)});
+        width: rem(32);
+        height: rem(42);
+        background-image: url('../img/icon/ic_file_large--white.svg');
+
+        @media screen and (max-width: $screen-xs-max) {
+          left: rem(-24);
+          top: calc(50% - #{rem(13)});
+          width: rem(20);
+          height: rem(26);
+          background-image: url('../img/icon/ic_file--white.svg');
+        }
+      }
+
+      &:after {
+        right: rem(-32);
+        top: calc(50% - #{rem(12)});
+        width: rem(24);
+        height: rem(24);
+      }
+    }
+  }
+
+  &.mod-bg-white {
+    .button-inner {
+      background-color: $c-bg--white;
+    }
+
+    .button-text {
+      color: $c-f--gray;
+
+      &:before {
+        background-image: url('../img/icon/ic_file_large--orange.svg');
+      }
+
+      &:after {
+        background-image: url('../img/icon/ic_arrow--orange.svg');
+      }
+    }
+  }
+
+  &.mod-attention {
+    .button-inner:before {
+      will-change: auto;
+      animation: a_light 2s 0s linear infinite;
+    }
+  }
+
+}
+
+
+
+@keyframes a_light {
+  0% {
+    opacity: 0;
+    left: 0%;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0;
+    left: 100%;
+  }
+
+  100% {
+    opacity: 0;
+    left: 100%;
+  }
+}

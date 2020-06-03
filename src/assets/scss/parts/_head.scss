@@ -1,0 +1,42 @@
+.head {
+  padding-bottom: rem(20);
+  position: relative;
+  text-align: center;
+  margin-bottom: rem(60);
+
+  @media screen and (max-width: $screen-xs-max) {
+    padding-bottom: rem(14);
+    margin-bottom: rem(30);
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - #{rem(25)});
+    width: rem(50);
+    height: rem(4);
+    background-color: $c-bg--orange;
+  }
+
+  .head-text {
+    font-size: rem(30);
+    font-weight: bold;
+    color: $c-f--gray;
+
+    @media screen and (max-width: $screen-xs-max) {
+      font-size: rem(24);
+    }
+  }
+
+  &.mod-white {
+    &:before {
+      background-color: $c-bg--white;
+    }
+
+    .head-text {
+      color: $c-f--white;
+    }
+
+  }
+}

@@ -1,0 +1,66 @@
+html {
+  min-height: 100vh;
+  font-size: vw__pc(12);
+  @media screen and (max-width: $screen-xs-max) {
+    font-size: vw__sp(12);
+  }
+}
+
+body {
+  font-size: rem(18);
+  line-height: (27/18);
+  font-family: $font_base;
+  font-weight: 400;
+  font-display: swap;
+  -webkit-font-smoothing: antialiased;
+  
+
+  @media screen and (max-width: $screen-xs-max) {
+    padding-top: rem(54);
+    padding-bottom: rem(140);
+    font-size: rem(18);
+    line-height: (22/14);
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  transition: opacity 0.2s linear;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+img,
+svg {
+  width: 100%;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: underline;
+  color: inherit;
+  transition: color 0.3s ease;
+  &:hover {
+    color: $c-f--blue;
+  }
+}
+
+.l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  @media screen and (max-width: $screen-xs-max) {
+    position: absolute;
+  }
+}

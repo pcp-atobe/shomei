@@ -1,0 +1,31 @@
+include ./_svg.pug
+
+mixin head(label,classes)
+  h2.head.u-fade.u-anime&attributes( { 'class': classes } )
+    span.head-text= label
+
+mixin button(label,classes)
+  button.button&attributes( { 'class': classes } )
+    .button-inner
+      .button-text= label
+
+mixin card(head)
+  .card
+    .card-inner
+      h2.card-head
+        .card-head__check
+        .card-head__text= head
+      .card-body
+        block
+
+mixin card__qa(head)
+  .card.mod-qa
+    .card-inner
+      h2.card-head.js-click-toggle
+        .card-head__icon.u-mb-xs--2 Q
+        .card-head__text= head
+
+      .card-body
+        .card-body__icon A
+        .card-body__msg
+          block
